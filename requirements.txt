@@ -1,0 +1,21 @@
+# requirements.txt
+# For Streamlit deployment of Aerial Bird vs Drone Classifier
+# Tested with Python 3.10 – 3.11
+
+streamlit==1.38.0
+
+# TensorFlow CPU-only (sufficient for Streamlit Cloud; smaller & faster install)
+tensorflow==2.15.0
+
+# Alternative: if you need GPU support locally, use:
+# tensorflow==2.15.0  # already covers CPU + GPU on machines that have CUDA
+
+numpy==1.26.4
+Pillow==10.4.0
+opencv-python-headless==4.10.0.84    # headless = no GUI dependencies (perfect for cloud)
+
+# Optional but recommended for better performance / reproducibility
+protobuf==4.25.4                     # locks protobuf to avoid TF conflicts
+
+# Pin specific versions to guarantee identical behavior
+# (Streamlit Cloud uses Linux, so these versions are verified to work)
